@@ -1,22 +1,15 @@
 public class Node<T> {
 	
-	private T value;
-	private T right = null;
-	private T left = null;
+	public T value;
+	public Node<T> next = null;
 	
 	public Node(T value) {
 		this.value = value;
 	}
 	
-	public Node(T value, T right) {
+	public Node(T value, Node<T> next) {
 		this.value = value;
-		this.right = right;
-	}
-	
-	public Node(T value, T right, T left) {
-		this.value = value;
-		this.right = right;
-		this.left = left;
+		this.next = next;
 	}
 
 	public T getValue() {
@@ -27,19 +20,19 @@ public class Node<T> {
 		this.value = value;
 	}
 
-	public T getRight() {
-		return this.right;
+	public Node<T> getNext() {
+		return this.next;
 	}
-
-	public void setRight(T right) {
-		this.right = right;
+	
+	public void setNext(Node<T> next) {
+		this.next = next;
 	}
-
-	public T getLeft() {
-		return this.left;
+	
+	public boolean isEmpty() {
+		return this.value != null;
 	}
-
-	public void setLeft(T left) {
-		this.left = left;
+	
+	public boolean hasNext() {
+		return this.next != null;
 	}
 }
