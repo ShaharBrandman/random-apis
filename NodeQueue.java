@@ -2,19 +2,6 @@ public class NodeQueue<T> {
 	public Node<T> first = null;
 	public Node<T> last = null;
 	
-	public NodeQueue() {
-		
-	}
-	
-	public NodeQueue(Node<T> first) {
-		this.first = first;
-	}
-	
-	public NodeQueue(Node<T> first, Node<T> last) {
-		this.first = first;
-		this.last = last;
-	}
-	
 	public void insert(T value) {
 		if (last == null) {
 			first = new Node<T>(value);
@@ -51,6 +38,8 @@ public class NodeQueue<T> {
 			str += f.getNext() + ", ";
 			f = first.getNext();
 		}
+		
+		str += "]";
 		
 		return str;
 	}
