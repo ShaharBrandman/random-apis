@@ -56,6 +56,6 @@ public class NodeQueue<T> {
 	}
 	
 	public boolean isEmpty() {
-		return (this.first != null) & (this.last != null);
+		return this.first == null;
 	}
 }
