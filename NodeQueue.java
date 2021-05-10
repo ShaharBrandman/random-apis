@@ -54,4 +54,8 @@ public class NodeQueue<T> {
 		
 		return str;
 	}
+	
+	public boolean isEmpty() {
+		return (this.first != null) & (this.last != null);
+	}
 }
