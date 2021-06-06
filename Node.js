@@ -28,5 +28,16 @@ class node {
     hasLeft() {
         return this.left != undefined
     }
-}
 
+    setRight(right) {
+        this.right = right
+    }
+
+    setLeft(left) {
+        this.left = left
+    }
+
+    setValue(value) {
+        this.value =value
+    }
+}
